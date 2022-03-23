@@ -2,3 +2,13 @@ syntax = "proto3";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Common";
+
+// 定义了公共请求参数
+message BaseRequest{
+
+}
+
+// 定义了公共返回参数
+message BaseResp{
+
+}

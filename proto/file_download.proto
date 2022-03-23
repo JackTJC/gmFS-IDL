@@ -4,7 +4,7 @@ option java_package = "com.graduate.design";
 option java_outer_classname="FileDownload";
 
 message DownloadFileRequest{
-
+    int64 node_id = 1;
 }
 
 message DownloadFileResponse{
