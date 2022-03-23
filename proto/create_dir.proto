@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+option java_package = "com.graduate.design";
+option java_outer_classname="CreateDir";
+
 
 message CreateDirRequest{
 
