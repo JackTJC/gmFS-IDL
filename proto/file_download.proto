@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+package graduate_design;
+
+import "common.proto";
+
 option java_package = "com.graduate.design";
 option java_outer_classname="FileDownload";
 
@@ -8,5 +12,5 @@ message DownloadFileRequest{
 }
 
 message DownloadFileResponse{
-
+    BaseResp base_resp = 255;
 }

@@ -1,7 +1,16 @@
 syntax = "proto3";
 
+package graduate_design;
+
 option java_package = "com.graduate.design";
 option java_outer_classname="Common";
+
+// 节点类型
+enum NodeType{
+    Unknown = 0;// 未知
+    File =  1;// 文件类型
+    Dir = 2;// 文件类型
+}
 
 // 定义了公共请求参数
 message BaseRequest{
@@ -10,5 +19,6 @@ message BaseRequest{
 
 // 定义了公共返回参数
 message BaseResp{
-
+    int32 status_code = 1; // 错误码，一般认为0是成功
+    string message = 2; // 错误提示
 }
