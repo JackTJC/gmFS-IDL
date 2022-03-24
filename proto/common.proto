@@ -12,6 +12,13 @@ enum NodeType{
     Dir = 2;// 文件类型
 }
 
+// 文件节点
+message Node{
+    NodeType node_type = 1;
+    int64 node_id = 2;
+    string node_name = 3;
+}
+
 // 定义了公共请求参数
 message BaseRequest{
 
