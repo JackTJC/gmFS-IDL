@@ -1,5 +1,7 @@
 # graduate-design-idl
 
+> 推荐vs code+vs code proto3插件
+
 ---
 
 ## 简介
