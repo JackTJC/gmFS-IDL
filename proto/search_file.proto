@@ -12,5 +12,6 @@ message SearchFileRequest{
 }
 
 message SearchFileResponse{
+    repeated Node node_list = 1; // 搜索结果
     BaseResp base_resp = 255;
 }

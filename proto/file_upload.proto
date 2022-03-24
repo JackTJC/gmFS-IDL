@@ -8,9 +8,9 @@ option java_package = "com.graduate.design";
 option java_outer_classname="FileUpload";
 
 message UploadFileRequest{
-    string file_name = 1;
-    int64 parent_id = 2;
-    repeated string index_str_list = 3;
+    string file_name = 1; // 文件名称
+    int64 parent_id = 2; // 文件的父节点
+    repeated string index_str_list = 3; // 文件的关键词列表，用于后续可加密搜索
 }
 
 message UploadFileReponse{
