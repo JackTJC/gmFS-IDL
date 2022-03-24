@@ -6,6 +6,9 @@
 
 以[Protobuf](https://developers.google.com/protocol-buffers)为基础定义的IDL（Interface Description Language）,及其方便的生成代码，不需要繁琐的文档定义和json结构体编写。一次编写，多语言(C++,Java,Go,Objective-C)通用。
 
+- [简介](https://developers.google.com/protocol-buffers/docs/overview)
+- [语法](https://developers.google.com/protocol-buffers/docs/proto3)
+
 ## 使用
 
 ### protoc安装
