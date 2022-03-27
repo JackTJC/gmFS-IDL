@@ -6,6 +6,7 @@ import "common.proto";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="FileUpload";
+option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message UploadFileRequest{
     string file_name = 1; // 文件名称

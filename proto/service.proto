@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package graduate_design;
+
+import "create_dir.proto";
+import "download_file.proto";
+import "upload_file.proto";
+import "get_node.proto";
+import "search_file.proto";
+import "user_login.proto";
+
+
+import "google/api/annotations.proto";
+
+
+service GraduateDesignApi{
+    rpc UserLogin (UserLoginRequest) returns (UserLoginResponse){
+        option (google.api.http) = {
+            post:"/user/login/"
+        };
+    }
+
+    rpc CreateDir (CreateDirRequest) returns (CreateDirResponse){
+        option (google.api.http) = {
+            post:"/dir/create/"
+        };
+    }
+
+    rpc UploadFile (UploadFileRequest) returns (UploadFileReponse){
+        option (google.api.http) = {
+            post:"/file/upload/"
+        };
+    }
+
+    rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
+        option (google.api.http) = {
+            post:""
+        };
+    }
+
+    rpc GetNode (GetNodeRequest) returns (GetNodeResponse){
+        option (google.api.http) = {
+            post:"/node/get/"
+        };
+    }
+
+    rpc SearchFile (SearchFileRequest) returns (SearchFileResponse){
+        option (google.api.http) = {
+            post:"/file/search/"
+        };
+    }
+
+    // template
+    // rpc  () returns {
+    //     option (google.api.http) = {
+    //         post:""
+    //     };
+    // }
+}

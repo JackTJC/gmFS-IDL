@@ -4,6 +4,7 @@ package graduate_design;
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Common";
+option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 // 节点类型
 enum NodeType{
@@ -17,6 +18,7 @@ message Node{
     NodeType node_type = 1;
     int64 node_id = 2;
     string node_name = 3;
+    int64 create_time = 4; // 节点创建时间
 }
 
 // 定义了公共请求参数
