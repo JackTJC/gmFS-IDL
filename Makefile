@@ -4,7 +4,7 @@ java:
 
 golang:
 	mkdir -p output/go
-	protoc --go_out=./output/go --proto_path=proto ./proto/*
+	protoc --go_out=${GO_PATH}/src/ --proto_path=proto ./proto/*.proto
 
 clean:
 	rm -rf output/*
