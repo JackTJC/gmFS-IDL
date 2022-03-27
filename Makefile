@@ -6,7 +6,7 @@ golang:
 	protoc --go_out=$(GOPATH)/src/ --proto_path=proto ./proto/*.proto
 
 go_grpc:
-	protoc --go-grpc_out=$(GOPATH)/src/ ./proto/service.proto
+	protoc --go-grpc_out=$(GOPATH)/src/ ./proto/service.proto -Iproto
 
 clean:
 	rm -rf output/*
