@@ -9,10 +9,10 @@ option java_outer_classname="GetNode";
 option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message GetNodeRequest{
-    int64 node_id = 1; // 节点id
+    int64 nodeId = 1; // 节点id
 }
 
 message GetNodeResponse{
     Node node = 1; // 节点
-    BaseResp base_resp = 255;    
+    BaseResp baseResp = 255;    
 }

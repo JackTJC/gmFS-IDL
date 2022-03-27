@@ -9,9 +9,9 @@ option java_outer_classname="FileDownload";
 option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message DownloadFileRequest{
-    int64 node_id = 1; // 节点id
+    int64 nodeId = 1; // 节点id
 }
 
 message DownloadFileResponse{
-    BaseResp base_resp = 255;
+    BaseResp baseResp = 255;
 }

@@ -13,6 +13,6 @@ message SearchFileRequest{
 }
 
 message SearchFileResponse{
-    repeated Node node_list = 1; // 搜索结果
-    BaseResp base_resp = 255;
+    repeated Node nodeList = 1; // 搜索结果
+    BaseResp baseResp = 255;
 }

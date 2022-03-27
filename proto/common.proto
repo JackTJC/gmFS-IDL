@@ -15,10 +15,10 @@ enum NodeType{
 
 // 文件节点
 message Node{
-    NodeType node_type = 1;
-    int64 node_id = 2;
-    string node_name = 3;
-    int64 create_time = 4; // 节点创建时间
+    NodeType nodeType = 1;
+    int64 nodeId = 2;
+    string nodeName = 3;
+    int64 createTime = 4; // 节点创建时间
 }
 
 // 定义了公共请求参数
@@ -28,6 +28,6 @@ message BaseRequest{
 
 // 定义了公共返回参数
 message BaseResp{
-    int32 status_code = 1; // 错误码，一般认为0是成功
+    int32 statusCode = 1; // 错误码，一般认为0是成功
     string message = 2; // 错误提示
 }
