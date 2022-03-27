@@ -15,7 +15,14 @@
 
 ### protoc安装
 
-- linux&macos
+- linux
+
+  ```bash
+  apt install -y protobuf-compiler
+  protoc --version
+  ```
+  
+- macos
 
   1. 安装brew
 
@@ -42,5 +49,9 @@
   更详细的[参考手册](https://developers.google.com/protocol-buffers/docs/javatutorial)
 
 - go
+
+  ```bash
+  make golang
+  ```
 
 - objective-c
