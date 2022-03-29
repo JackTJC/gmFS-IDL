@@ -22,6 +22,7 @@ service GraduateDesignApi{
     rpc Ping (PingRequest) returns (PingResponse){
         option (google.api.http) = {
             post: "/ping"
+            body: "*"
         }; 
     }
     rpc UserLogin (UserLoginRequest) returns (UserLoginResponse){
@@ -33,30 +34,35 @@ service GraduateDesignApi{
     rpc CreateDir (CreateDirRequest) returns (CreateDirResponse){
         option (google.api.http) = {
             post:"/dir/create"
+            body: "*"
         };
     }
 
     rpc UploadFile (UploadFileRequest) returns (UploadFileReponse){
         option (google.api.http) = {
             post:"/file/upload"
+            body: "*"
         };
     }
 
     rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
         option (google.api.http) = {
             post:"/file/download"
+            body: "*"
         };
     }
 
     rpc GetNode (GetNodeRequest) returns (GetNodeResponse){
         option (google.api.http) = {
             post:"/node/get"
+            body: "*"
         };
     }
 
     rpc SearchFile (SearchFileRequest) returns (SearchFileResponse){
         option (google.api.http) = {
             post:"/file/search"
+            body: "*"
         };
     }
 
