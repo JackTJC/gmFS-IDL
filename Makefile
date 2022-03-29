@@ -9,6 +9,8 @@ golang:
 
 go_grpc:
 	protoc --go-grpc_out=$(GOPATH)/src/ ./proto/service.proto -Iproto
+grpc_http:
+	protoc --grpc-gateway_out=logtostderr=true:$(GOPATH)/src/ ./proto/service.proto -Iproto
 swift:
 	mkdir -p output/swift
 	protoc --swift_out=./output/swift ./proto/*.proto -Iproto
