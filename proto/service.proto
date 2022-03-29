@@ -21,42 +21,42 @@ import "google/api/annotations.proto";
 service GraduateDesignApi{
     rpc Ping (PingRequest) returns (PingResponse){
         option (google.api.http) = {
-            post:"/ping/"
+            post: "/ping"
         }; 
     }
     rpc UserLogin (UserLoginRequest) returns (UserLoginResponse){
         option (google.api.http) = {
-            post:"/user/login/"
+            post:"/user/login"
         };
     }
 
     rpc CreateDir (CreateDirRequest) returns (CreateDirResponse){
         option (google.api.http) = {
-            post:"/dir/create/"
+            post:"/dir/create"
         };
     }
 
     rpc UploadFile (UploadFileRequest) returns (UploadFileReponse){
         option (google.api.http) = {
-            post:"/file/upload/"
+            post:"/file/upload"
         };
     }
 
     rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
         option (google.api.http) = {
-            post:"/file/download/"
+            post:"/file/download"
         };
     }
 
     rpc GetNode (GetNodeRequest) returns (GetNodeResponse){
         option (google.api.http) = {
-            post:"/node/get/"
+            post:"/node/get"
         };
     }
 
     rpc SearchFile (SearchFileRequest) returns (SearchFileResponse){
         option (google.api.http) = {
-            post:"/file/search/"
+            post:"/file/search"
         };
     }
 
