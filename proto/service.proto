@@ -38,7 +38,7 @@ service GraduateDesignApi{
 
     rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
         option (google.api.http) = {
-            post:""
+            post:"/file/download/"
         };
     }
 

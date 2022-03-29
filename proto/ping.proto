@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "common.proto";
+
+option java_package = "com.graduate.design";
+option java_outer_classname="GetNode";
+option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
+
+message PingRequest{
+    string name = 1;
+}
+
+message PingResponse{
+    string msg = 1;
+    BaseResp BaseResp = 255;
+}
