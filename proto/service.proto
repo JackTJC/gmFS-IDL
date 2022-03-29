@@ -8,6 +8,7 @@ import "upload_file.proto";
 import "get_node.proto";
 import "search_file.proto";
 import "user_login.proto";
+import "ping.proto";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Service";
@@ -18,6 +19,11 @@ import "google/api/annotations.proto";
 
 
 service GraduateDesignApi{
+    rpc Ping (PingRequest) returns (PingResponse){
+        option (google.api.http) = {
+            post:"/ping/"
+        }; 
+    }
     rpc UserLogin (UserLoginRequest) returns (UserLoginResponse){
         option (google.api.http) = {
             post:"/user/login/"
