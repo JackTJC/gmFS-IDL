@@ -9,6 +9,7 @@ import "get_node.proto";
 import "search_file.proto";
 import "user_login.proto";
 import "ping.proto";
+import "user_register.proto";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Service";
@@ -25,43 +26,52 @@ service GraduateDesignApi{
             body: "*"
         }; 
     }
+
+    rpc UserRegister (UserRegisterRequest) returns (UserRegisterResponse){
+        option (google.api.http) = {
+            post: "/user/register"
+            body: "*"
+        };
+    }
+
     rpc UserLogin (UserLoginRequest) returns (UserLoginResponse){
         option (google.api.http) = {
-            post:"/user/login"
+            post: "/user/login"
+            body: "*"
         };
     }
 
     rpc CreateDir (CreateDirRequest) returns (CreateDirResponse){
         option (google.api.http) = {
-            post:"/dir/create"
+            post: "/dir/create"
             body: "*"
         };
     }
 
     rpc UploadFile (UploadFileRequest) returns (UploadFileReponse){
         option (google.api.http) = {
-            post:"/file/upload"
+            post: "/file/upload"
             body: "*"
         };
     }
 
     rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
         option (google.api.http) = {
-            post:"/file/download"
+            post: "/file/download"
             body: "*"
         };
     }
 
     rpc GetNode (GetNodeRequest) returns (GetNodeResponse){
         option (google.api.http) = {
-            post:"/node/get"
+            post: "/node/get"
             body: "*"
         };
     }
 
     rpc SearchFile (SearchFileRequest) returns (SearchFileResponse){
         option (google.api.http) = {
-            post:"/file/search"
+            post: "/file/search"
             body: "*"
         };
     }
