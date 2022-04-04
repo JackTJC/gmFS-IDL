@@ -10,8 +10,11 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 message CreateDirRequest{
     string dirName = 1; // 文件夹名称
     int64 parentId = 2; // 文件夹的父节点
+
+    BaseReq baseReq = 255;
 }
 
 message CreateDirResponse{
+
     BaseResp baseResp = 255;
 }

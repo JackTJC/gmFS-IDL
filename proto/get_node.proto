@@ -8,9 +8,12 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message GetNodeRequest{
     int64 nodeId = 1; // 节点id
+
+    BaseReq baseReq = 255;
 }
 
 message GetNodeResponse{
     Node node = 1; // 节点
+
     BaseResp baseResp = 255;    
 }

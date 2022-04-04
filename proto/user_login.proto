@@ -9,9 +9,12 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 message UserLoginRequest{
     string userName = 1; // 用户名
     string password = 2; // 密码
+    
+    BaseReq baseReq = 255;
 }
 
 message UserLoginResponse{
     string token = 1; //  登录成功返回的token
+
     BaseResp baseResp = 255;
 }

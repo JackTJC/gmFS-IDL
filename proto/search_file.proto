@@ -9,9 +9,12 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 // base64
 message SearchFileRequest{
     string keyword = 1;
+
+    BaseReq baseReq = 255;
 }
 
 message SearchFileResponse{
     repeated Node nodeList = 1; // 搜索结果
+
     BaseResp baseResp = 255;
 }

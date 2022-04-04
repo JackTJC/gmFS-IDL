@@ -12,8 +12,11 @@ message UploadFileRequest{
     int64 parentId = 2; // 文件的父节点
     repeated string indexList = 3; // 文件的关键词列表，用于后续可加密搜索
     bytes content = 4; // 文件内容
+
+    BaseReq baseReq = 255;
 }
 
 message UploadFileReponse{
+
     BaseResp baseResp = 255;
 }

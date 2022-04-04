@@ -8,9 +8,12 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message PingRequest{
     string name = 1;
+
+    BaseReq baseReq = 255;
 }
 
 message PingResponse{
     string msg = 1;
+
     BaseResp BaseResp = 255;
 }

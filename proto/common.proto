@@ -20,7 +20,7 @@ message Node{
 }
 
 // 定义了公共请求参数
-message BaseRequest{
+message BaseReq{
     string token = 1; // 登录成功后获得的token
 }
 

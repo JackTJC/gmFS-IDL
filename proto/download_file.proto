@@ -10,9 +10,12 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 // 下载下来的是密文
 message DownloadFileRequest{
     int64 nodeId = 1; // 节点id
+
+    BaseReq baseReq = 255; 
 }
 
 message DownloadFileResponse{
     bytes content = 1;
+
     BaseResp baseResp = 255;
 }

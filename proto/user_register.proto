@@ -9,8 +9,11 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 message UserRegisterRequest{
     string userName = 1;
     string password = 2;
+
+    BaseReq baseReq = 255;
 }
 
 message UserRegisterResponse{
-    BaseResp BaseResp = 255;
+
+    BaseResp baseResp = 255;
 }
