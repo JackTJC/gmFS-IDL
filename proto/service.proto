@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package graduate_design;
-
 import "create_dir.proto";
 import "download_file.proto";
 import "upload_file.proto";
