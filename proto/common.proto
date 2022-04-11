@@ -9,6 +9,8 @@ enum StatusCode {
     // 登录相关
     UserNotFound = 1;
     WrongPasswd = 2;
+    // 注册相关
+    UserExist = 100;
 }
 
 // 节点类型
