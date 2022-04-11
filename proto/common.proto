@@ -9,6 +9,8 @@ enum StatusCode {
     // 登录相关
     UserNotFound = 1;
     WrongPasswd = 2;
+    // 通用错误
+    CommonErr = 1000;
 }
 
 // 节点类型
