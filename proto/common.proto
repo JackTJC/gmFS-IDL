@@ -11,6 +11,8 @@ enum StatusCode {
     WrongPasswd = 2;
     // 注册相关
     UserExist = 100;
+    // 通用错误
+    CommonErr = 1000;
 }
 
 // 节点类型
