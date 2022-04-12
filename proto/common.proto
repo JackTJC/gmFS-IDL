@@ -7,10 +7,10 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 enum StatusCode {
     Success = 0;
     // 登录相关
-    UserNotFound = 1;
-    WrongPasswd = 2;
+    UserNotFound = 1; // 用户不存在
+    WrongPasswd = 2; // 密码错误
     // 注册相关
-    UserExist = 100;
+    UserExist = 100; // 用户已存在
     // 通用错误
     CommonErr = 1000;
 }
@@ -28,6 +28,7 @@ message Node{
     int64 nodeId = 2;
     string nodeName = 3;
     int64 createTime = 4; // 节点创建时间
+    int64 updateTime = 5; // 节点更新时间
 }
 
 // 定义了公共请求参数

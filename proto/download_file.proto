@@ -15,7 +15,8 @@ message DownloadFileRequest{
 }
 
 message DownloadFileResponse{
-    bytes content = 1;
+    string fileName = 1;
+    bytes content = 2;
 
     BaseResp baseResp = 255;
 }

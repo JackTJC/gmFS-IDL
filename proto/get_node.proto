@@ -14,6 +14,7 @@ message GetNodeRequest{
 
 message GetNodeResponse{
     Node node = 1; // 节点
+    repeated Node subNodes = 2; // 子节点
 
     BaseResp baseResp = 255;    
 }
