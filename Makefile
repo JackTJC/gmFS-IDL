@@ -20,5 +20,9 @@ go_all:
 swift:
 	mkdir -p output/swift
 	protoc --swift_out=./output/swift ./proto/*.proto -Iproto
+
+javascript:
+	mkdir -p output/js/{lib,gen}
+	protoc --proto_path proto --js_out=import_style=commonjs,binary:output/js proto/*.proto
 clean:
 	rm -rf output/*
