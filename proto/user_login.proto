@@ -13,8 +13,15 @@ message UserLoginRequest{
     BaseReq baseReq = 255;
 }
 
+message UserInfo{
+    int64 rootId = 1;
+    string userName = 2;
+    string email = 3;
+}
+
 message UserLoginResponse{
     string token = 1; //  登录成功返回的token
+    UserInfo userInfo = 2; // 用户信息
 
     BaseResp baseResp = 255;
 }
