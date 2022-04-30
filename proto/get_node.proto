@@ -8,7 +8,6 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message GetNodeRequest{
     int64 nodeId = 1; // 节点id
-    bool allDir = 2; // 是否获取所有文件夹
 
     BaseReq baseReq = 255;
 }
