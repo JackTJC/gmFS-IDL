@@ -30,6 +30,7 @@ message Node{
     bytes nodeContent = 4;
     int64 createTime = 5; // 节点创建时间
     int64 updateTime = 6; // 节点更新时间
+    repeated Node subNodeList = 7; // 子节点
 }
 
 // 定义了公共请求参数

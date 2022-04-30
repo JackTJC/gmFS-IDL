@@ -8,13 +8,14 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message GetNodeRequest{
     int64 nodeId = 1; // 节点id
+    bool allDir = 2; // 是否获取所有文件夹
 
     BaseReq baseReq = 255;
 }
 
 message GetNodeResponse{
     Node node = 1; // 节点
-    repeated Node subNodes = 2; // 子节点
+    repeated Node subNodes = 2; // 子节点 deprecated
 
     BaseResp baseResp = 255;    
 }
