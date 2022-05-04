@@ -1,7 +1,6 @@
 syntax = "proto3";
 
 import "create_dir.proto";
-import "download_file.proto";
 import "upload_file.proto";
 import "get_node.proto";
 import "search_file.proto";
@@ -50,13 +49,6 @@ service GraduateDesignApi{
     rpc UploadFile (UploadFileRequest) returns (UploadFileReponse){
         option (google.api.http) = {
             post: "/file/upload"
-            body: "*"
-        };
-    }
-
-    rpc DownloadFile (DownloadFileRequest) returns (DownloadFileResponse){
-        option (google.api.http) = {
-            post: "/file/download"
             body: "*"
         };
     }
