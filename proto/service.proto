@@ -8,9 +8,7 @@ import "search_file.proto";
 import "user_login.proto";
 import "ping.proto";
 import "user_register.proto";
-import "get_user_info.proto";
 import "register_file.proto";
-import "get_all_dir.proto";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Service";
@@ -76,23 +74,11 @@ service GraduateDesignApi{
             body: "*"
         };
     }
-    rpc  GetUserInfo (GetUserInfoRequest) returns (GetUserInfoResponse){
-        option (google.api.http) = {
-            post: "/user/info/get"
-            body: "*"
-        };
-    }
     rpc RegisterFile (RegisterFileRequest) returns (RegisterFileResponse){
         option (google.api.http) = {
             post: "/file/register"
             body: "*"
         };        
-    }
-    rpc GetAllDir (GetAllDirRequest) returns (GetAllDirResponse){
-        option (google.api.http) = {
-            post: "/dir/get_all"
-            body: "*"
-        };     
     }
     // template
     // rpc  () returns {
