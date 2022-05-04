@@ -31,6 +31,7 @@ message Node{
     int64 createTime = 5; // 节点创建时间
     int64 updateTime = 6; // 节点更新时间
     repeated Node subNodeList = 7; // 子节点
+    bytes secretKey = 8; // 节点密钥，已加密过
 }
 
 // 定义了公共请求参数
