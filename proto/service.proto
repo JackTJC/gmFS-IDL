@@ -8,6 +8,7 @@ import "user_login.proto";
 import "ping.proto";
 import "user_register.proto";
 import "register_file.proto";
+import "delete_file.proto";
 
 option java_package = "com.graduate.design";
 option java_outer_classname="Service";
@@ -71,6 +72,12 @@ service GraduateDesignApi{
             post: "/file/register"
             body: "*"
         };        
+    }
+    rpc DeleteFile (DeleteFileRequest) returns (DeleteFileResponse){
+        option (google.api.http) = {
+            post: "/file/delete"
+            body: "*"
+        };     
     }
     // template
     // rpc  () returns {

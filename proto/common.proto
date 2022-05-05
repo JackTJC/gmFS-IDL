@@ -9,8 +9,14 @@ enum StatusCode {
     // 登录相关
     UserNotFound = 1; // 用户不存在
     WrongPasswd = 2; // 密码错误
+
     // 注册相关
     UserExist = 100; // 用户已存在
+
+    // 文件相关
+    FileExist = 200; // 用户已经拥有该文件
+    SubExist = 201; // 子文件已经存在与文件夹中
+
     // 通用错误
     CommonErr = 1000;
 }
@@ -24,10 +30,10 @@ enum NodeType{
 
 // 文件节点
 message Node{
-    NodeType nodeType = 1;
+    NodeType nodeType = 1; // 节点类型，文件还是文件夹
     int64 nodeId = 2;
     string nodeName = 3;
-    bytes nodeContent = 4;
+    bytes nodeContent = 4; // 节点内容
     int64 createTime = 5; // 节点创建时间
     int64 updateTime = 6; // 节点更新时间
     repeated Node subNodeList = 7; // 子节点
