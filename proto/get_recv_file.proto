@@ -8,10 +8,11 @@ option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 // 前端分享的文件
 message SharedFile{
-    int64 fileId = 1;
-    string fileName = 2;
-    bytes key = 3; // 解密文件用的key
-    string from = 4; // 文件来自谁? 
+    int64 shareId = 1; // 此条分享记录的id
+    int64 fileId = 2;
+    string fileName = 3;
+    bytes key = 4; // 解密文件用的key
+    string from = 5; // 文件来自谁? 
 }
 
 message GetRecvFileRequest{

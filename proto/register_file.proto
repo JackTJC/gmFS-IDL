@@ -11,6 +11,10 @@ message RegisterFileRequest{
     int64 dirId = 2;
     bytes secretKey = 3; // 文件解密key
 
+    // 前端使用
+    bool isWeb = 100;
+    int64 shareId = 101;
+
     BaseReq baseReq = 255;
 }
 
