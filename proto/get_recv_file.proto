@@ -20,6 +20,7 @@ message GetRecvFileRequest{
 }
 
 message GetRecvFileResponse{
+    repeated SharedFile shareFileList = 1;
 
     BaseResp baseResp = 255;
 }
