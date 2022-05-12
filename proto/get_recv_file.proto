@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "common.proto";
+
+option java_package = "com.graduate.design";
+option java_outer_classname="GetRecvFile";
+option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
+
+// 前端分享的文件
+message SharedFile{
+    int64 fileId = 1;
+    string fileName = 2;
+    bytes key = 3; // 解密文件用的key
+    string from = 4; // 文件来自谁? 
+}
+
+message GetRecvFileRequest{
+    BaseReq baseReq = 255;
+}
+
+message GetRecvFileResponse{
+
+    BaseResp baseResp = 255;
+}
