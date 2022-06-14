@@ -6,15 +6,14 @@ option java_package = "com.graduate.design";
 option java_outer_classname="SearchFile";
 option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
-// base64
 message SearchFileRequest{
-    string keyword = 1;
+    string keyword = 1; // 关键词
 
     BaseReq baseReq = 255;
 }
 
 message SearchFileResponse{
-    repeated Node nodeList = 1; // 搜索结果
+    repeated Node nodeList = 1; // 搜索结果，文件节点的列表
 
     BaseResp baseResp = 255;
 }

@@ -6,9 +6,11 @@ option java_package = "com.graduate.design";
 option java_outer_classname="DeleteFile";
 option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
+// 删除时需要给的id和所在的父文件夹id
+// 拿这两个id去节点关系表把父子关系解除即可
 message DeleteFileRequest{
-    int64 delNodeID = 1;
-    int64 parentNodeID = 3;
+    int64 delNodeID = 1; // 删除的节点id
+    int64 parentNodeID = 3; // 节点所在的文件夹节点id
 
     BaseReq baseReq = 255;
 }

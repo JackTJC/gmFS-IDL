@@ -13,8 +13,9 @@ message UserLoginRequest{
     BaseReq baseReq = 255;
 }
 
+// 用户信息，用于客户端和服务端存入到本地缓存
 message UserInfo{
-    int64 rootId = 1;
+    int64 rootId = 1;// 用户网盘根文件夹的节点id
     string userName = 2;
     string email = 3;
 }

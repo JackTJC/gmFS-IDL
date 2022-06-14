@@ -7,13 +7,13 @@ option java_outer_classname="RegisterFile";
 option go_package = "github.com/JackTJC/gmFS_backend/pb_gen";
 
 message RegisterFileRequest{
-    int64 fileId = 1;
-    int64 dirId = 2;
+    int64 fileId = 1;// 文件的节点id
+    int64 dirId = 2; // 文件保存的文件夹
     bytes secretKey = 3; // 文件解密key
 
     // 前端使用
-    bool isWeb = 100;
-    int64 shareId = 101;
+    bool isWeb = 100; // 标识这个请求来自web端
+    int64 shareId = 101; // 分享记录的记录id
 
     BaseReq baseReq = 255;
 }

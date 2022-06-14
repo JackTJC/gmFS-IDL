@@ -11,6 +11,28 @@
 - [简介](https://developers.google.com/protocol-buffers/docs/overview)
 - [语法](https://developers.google.com/protocol-buffers/docs/proto3)
 
+# 项目结构
+
+```bash
+./proto
+├── common.proto # 一些公共的数据结构定义
+├── create_dir.proto # 创建文件夹接口
+├── delete_file.proto # 删除文件接口
+├── get_node.proto # 获取文件节点接口
+├── get_recv_file.proto # 获取已收到的文件接口
+├── google/ # 类似于头文件，不用关心
+├── ping.proto # ping接口，测试连通性使用的
+├── register_file.proto # 注册文件接口
+├── search_file.proto # 搜索文件接口
+├── service.proto # uri定义接口
+├── share_file.proto # 分享文件接口
+├── upload_file.proto # 上传文件接口
+├── user_login.proto # 用户登录接口
+└── user_register.proto # 用户注册接口
+```
+
+
+
 # 使用
 
 ## protoc安装
@@ -156,11 +178,13 @@ ${PROJECT_DIR}/src/main/java # 以自身项目结构为准
    }
    ```
 
-### golang
+### golang（服务端使用）
 
 代码直接生成到目录，可以无需关心这里
 
-### swift
+### swift（IOS端使用）
 
 类似`java`将`output/swift`中文件批量导入XCode工程即可，另外需要在工具栏`File->Add Package...`添加`SwiftProtobuf`包
+
+
 
